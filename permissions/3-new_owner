@@ -1,2 +1,2 @@
 #!/bin/bash
-find . -maxdepth 1 -name "hello" -exec chown betty {} \;
+chown betty hello
