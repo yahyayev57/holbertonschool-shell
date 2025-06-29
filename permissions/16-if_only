@@ -1,4 +1,4 @@
 #!/bin/bash
-if [ "$(ls -l hello | awk '{print $3}')" = "guillaume" ]; then
+if find . -maxdepth 1 -user guillaume -name hello | grep -q hello; then
   chown vincent hello
 fi
