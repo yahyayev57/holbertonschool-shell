@@ -1,7 +1,2 @@
 #!/bin/bash
-if [ -e hello ]; then
-  chown betty hello
-else
-  echo "File hello does not exist"
-  exit 1
-fi
+find . -maxdepth 1 -name "hello" -exec chown betty {} \;
